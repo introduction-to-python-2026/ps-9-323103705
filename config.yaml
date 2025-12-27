@@ -1,2 +1,2 @@
 path: "parkinsons.joblib"
-features: ['DFA', 'HNR', 'RPDE', 'PPE']
+features: ['HNR', 'PPE']
