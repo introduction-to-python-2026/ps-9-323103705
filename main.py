@@ -13,6 +13,7 @@ x = df[['DFA', 'HNR', 'RPDE', 'PPE']]
 y = df[['status']]
 
 sns.pairplot(df, vars=['DFA', 'HNR', 'RPDE', 'PPE'], hue='status')
+plt.suptitle('Pair Plot of Numerical Features by status', y=1.02)
 plt.show()
 
 scaler = MinMaxScaler()
@@ -27,5 +28,3 @@ y_predict = dt.predict(x_test)
 accuracy = accuracy_score(y_test, y_predict)
 
 joblib.dump(dt, 'parkinsons.joblib')
-
-dt.fit(x_train, y_train)
