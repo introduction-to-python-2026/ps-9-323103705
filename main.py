@@ -9,10 +9,10 @@ import joblib
 
 df = pd.read_csv("parkinsons.csv")
 
-x = df[['DFA', 'HNR', 'RPDE', 'PPE']]
+x = df[['HNR', 'PPE']]
 y = df[['status']]
 
-sns.pairplot(df, vars=['DFA', 'HNR', 'RPDE', 'PPE'], hue='status')
+sns.pairplot(df, vars=['HNR', 'PPE'], hue='status')
 plt.suptitle('Pair Plot of Numerical Features by status', y=1.02)
 plt.show()
 
